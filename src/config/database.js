@@ -6,7 +6,7 @@ module.exports = {
   database: 'managerdb',
   define: {
     timestamps: true,
-    underscored: true, //padrao under_score
+    underscored: true, // padrao under_score
     underscoredAll: true,
   },
 };

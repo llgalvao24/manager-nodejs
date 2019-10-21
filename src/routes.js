@@ -16,6 +16,7 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.post('/students', StudentController.store);
+routes.put('/students', StudentController.update);
 
 // routes.get('/', async (req, res) => {
 //   const student = await Student.create({

@@ -1,6 +1,9 @@
 import { Router } from 'express';
+
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import Student from './app/models/Students';
+
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -12,14 +15,16 @@ routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
 
-// routes.get('/', async (req, res) => {
-//   const adm2 = await User.create({
-//     name: 'adm2',
-//     email: 'adm2@adm.com',
-//     password: '1234567',
-//   });
+routes.get('/', async (req, res) => {
+  const student = await Student.create({
+    name: 'Luiz',
+    email: 'llgalvao@gmail.com',
+    age: 29,
+    weight: 84.5,
+    height: 1.67,
+  });
 
-//   res.json(adm2);
-// });
+  res.json(student);
+});
 
 module.exports = routes;

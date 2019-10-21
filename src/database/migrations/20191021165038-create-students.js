@@ -22,13 +22,10 @@ module.exports = {
       },
       weight: {
         type: Sequelize.DECIMAL,
+        allowNull: false,
       },
       height: {
         type: Sequelize.DECIMAL,
-      },
-      provider: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
         allowNull: false,
       },
       created_at: {
